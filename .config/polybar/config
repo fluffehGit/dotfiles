@@ -157,7 +157,7 @@ animation-charging-padding-left = 2
 
 format-full = <label-full>
 label-full = ""
-label-full-paddingi-left = 1
+label-full-padding-left = 1
 format-full-foreground = ${colors.fg}
 format-full-background = ${colors.bg}
 
