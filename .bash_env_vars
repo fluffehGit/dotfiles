@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+#
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
+export TERM="xterm-256color"    #getting proper colors
+export HISTCONTROL=ignoredups:erasedups
+export EDITOR="vim"
+
+##################################################
+# xsecurelock setup
+##################################################
+
+#Avoiding xsecurelock compositor incompatibility
+#https://github.com/google/xsecurelock/blob/master/README.md#known-compatibility-issues
+export XSECURELOCK_NO_COMPOSITE=1
+
+#Setting TTF
+export XSECURELOCK_FONT="/usr/share/fonts/TTF/Inconsolata-UltraExpandedLight.ttf"
+
+#Setting asterisk unlock
+export XSECURELOCK_PASSWORD_PROMPT=asterisks
+
+#Showing date and time
+export XSECURELOCK_SHOW_DATETIME=1
