@@ -110,6 +110,13 @@ hc keybind "$Mod-KP_Home" use_index "3"
 hc keybind "$Mod-KP_Up" use_index "4"
 hc keybind "$Mod-KP_Prior" use_index "5"
 
+hc keybind "$Mod-Shift-KP_End" move_index "0"
+hc keybind "$Mod-Shift-KP_Down" move_index "1"
+hc keybind "$Mod-Shift-KP_Next" move_index "2"
+hc keybind "$Mod-Shift-KP_Home" move_index "3"
+hc keybind "$Mod-Shift-KP_Up" move_index "4"
+hc keybind "$Mod-Shift-KP_Prior" move_index "5"
+
 # cycle through tags
 hc keybind $Mod-period use_index +1 --skip-visible
 hc keybind $Mod-comma  use_index -1 --skip-visible
