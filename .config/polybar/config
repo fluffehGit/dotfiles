@@ -92,7 +92,7 @@ enable-ipc = true
 
 modules-left = ewmh xwindow
 modules-center =
-modules-right = kernel date xbacklight ram cpu wireless-network battery0
+modules-right = kernel date volume xbacklight ram cpu wireless-network battery0
 
 separator = |
 
@@ -109,6 +109,7 @@ adapter = AC
 full-at = 100
 
 format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-padding = 1
 format-discharging-background = ${colors.bg}
 
 ramp-capacity-0 = 
@@ -134,11 +135,11 @@ ramp-capacity-9 = 
 ramp-capacity-10 = 
 #ramp-capacity-10-foreground = #49A62C
 ramp-capacity-foreground = ${colors.fg}
-ramp-capacity-padding = 1
 
 label-discharging = %percentage%%
 
 format-charging = <animation-charging> <label-charging>
+format-charging-padding = 1
 format-charging-foreground = ${colors.fg}
 format-charging-background = ${colors.bg}
 
@@ -154,13 +155,13 @@ animation-charging-6 = 
 animation-charging-framerate = 750
 animation-charging-font = 2
 #animation-charging-foreground = #FBF15F
-animation-charging-padding = 2
 
 format-full = <label-full>
-label-full = ""
-label-full-padding = 1
+format-full-padding = 1
 format-full-foreground = ${colors.fg}
 format-full-background = ${colors.bg}
+
+label-full = ""
 
 ;======================================================================
 
@@ -177,16 +178,17 @@ type = internal/cpu
 
 interval = 1
 
-format-foreground = ${colors.fg}
-format-background = ${colors.bg}
-format-padding = 1
-
-format-prefix = 
+;
+format-prefix = 龍
 format-prefix-font = 2
 
 format = <label>
+format-padding = 1
 
 label = %percentage:3%%
+
+format-foreground = ${colors.fg}
+format-background = ${colors.bg}
 
 ;======================================================================
 
@@ -204,17 +206,13 @@ time = %H:%M
 
 format-prefix = " "
 format-prefix-font = 2
-#format-prefix-margin-right = 1
-#format-prefix-foreground = ${colors.yellow}
-#format-prefix-underline = ${colors.bg}
 
-#format-underline = ${colors.yellow}
 format-padding = 1
+
+label = %date% - %time%
 
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
-
-label = %date% - %time%
 
 ;======================================================================
 
@@ -270,11 +268,14 @@ exec = uname -r
 tail = false
 interval = 1024
 
+format-padding = 1
+
+format-prefix = " "
+format-prefix-font = 2
+;
+
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}
-format-padding = 1
-format-prefix = " "
-format-prefix-font = 2
 
 ;======================================================================
 
@@ -283,18 +284,43 @@ format-prefix-font = 2
 type = internal/memory
 interval = 1
 
-format-prefix = " "
+;" "
+format-prefix = " "
 format-prefix-font = 2
 
 format = <label>
 format-padding = 1
 
 label = %percentage_used%%
+
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}
 
 ;======================================================================
 
+;https://github.com/jaagr/polybar/wiki/Module:-volume
+[module/volume]
+type = internal/volume
+
+format-volume-prefix = "墳 "
+format-volume-prefix-font = 2
+format-volume = <label-volume>
+format-volume-padding = 1
+format-volume-foreground = ${colors.fg}
+format-volume-background = ${colors.bg}
+
+label-volume = %percentage%%
+
+label-muted = 婢
+label-muted-font = 2
+
+format-muted-padding = 1
+format-muted-foreground = ${colors.fg}
+format-muted-background = ${colors.bg}
+
+;======================================================================
+
+;
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 [module/wireless-network]
 type = internal/network
@@ -302,20 +328,20 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <label-connected>
+format-connected-font = 2
+format-connected-padding = 1
 format-connected-foreground = ${colors.fg}
 format-connected-background = ${colors.bg}
-format-connected-font = 2
 
 label-connected = 
-label-connected-padding = 1
 
 format-disconnected = <label-disconnected>
+format-disconnected-font = 2
+format-disconnected-padding = 1
 format-disconnected-foreground = ${colors.fg}
 format-disconnected-background = ${colors.bg}
-format-disconnected-font = 2
 
 label-disconnected = 
-label-disconnected-padding = 1
 
 ;======================================================================
 
@@ -323,7 +349,7 @@ label-disconnected-padding = 1
 ;https://github.com/jaagr/polybar/wiki/Module:-xbacklight
 type = internal/xbacklight
 
-format-prefix = " "
+format-prefix = " "
 format-prefix-font = 2
 format-prefix-foreground = ${colors.fg}
 format-prefix-background = ${colors.bg}
@@ -343,7 +369,7 @@ format-background = ${colors.bg}
 type = internal/xwindow
 
 label = %title%
-label-maxlen = 50
+label-maxlen = 30
 
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}

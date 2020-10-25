@@ -39,7 +39,7 @@
 
 # Examples of commands:
 
-#"xbindkeys_show" 
+#"xbindkeys_show"
 #  control+shift + q
 
 # set directly keycode (here control + f with my keyboard)
@@ -67,10 +67,10 @@
 
 ## Audio Volume Control
 # Audio Volume Up
-"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+"pactl set-sink-volume @DEFAULT_SINK@ +5%"
   XF86AudioRaiseVolume
 # Audio Volume Down
-"pactl set-sink-volume @DEFAULT_SINK@ -1000"
+"pactl set-sink-volume @DEFAULT_SINK@ -5%"
   XF86AudioLowerVolume
 # Audio Volume Up
 "pactl set-sink-volume @DEFAULT_SINK@ +10000"
@@ -79,7 +79,7 @@
 "pactl set-sink-volume @DEFAULT_SINK@ -10000"
   Control+XF86AudioLowerVolume
 # Audio Mute/Unmute
-"pactl set-sink-mute @DEFAULT_SINK@ toggle" 
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
   XF86AudioMute
 
 # Microphone Mute/Unmute
@@ -88,10 +88,10 @@
 
 ## Brightness Control
 # Brightness Up
-"xbacklight -inc 10%"
+"xbacklight -inc 5%"
   XF86MonBrightnessUp
 # Brightness Down
-"xbacklight -dec 10%"
+"xbacklight -dec 5%"
   XF86MonBrightnessDown
 
 ##################################
