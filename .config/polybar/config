@@ -46,7 +46,7 @@ format-underline =
 format-overline =
 format-spacing =
 format-padding =
-format-margin =
+format-margin = 1
 format-offset =
 
 ;==========================================================
@@ -56,12 +56,13 @@ format-offset =
 [colors]
 ;RetroWave theme:
 bg = #222629
-bg-aa = #00222629
+bg-aa = #00[222629]
 fg = #AAAAAA
 alert = #E81088
 pink = #CD5EBD
 yellow = #C1941A
 purple = #7E52C6
+blue = #035EE8
 
 ;==========================================================
 ;HerbstLuftWM
@@ -81,35 +82,30 @@ foreground = ${colors.fg}
 
 line-size = 2
 
-padding-left = 1
-padding-right = 1
-
 font-0 = "mononoki Nerd Font Mono:style=Regular:size=12;1"
 font-1 = "mononoki Nerd Font Mono:style=Regular:size=20;3"
 font-2 = "Material Icons:size=15;4"
 
 enable-ipc = true
 
-modules-left = ewmh xwindow
-modules-center =
-modules-right = kernel date volume xbacklight ram cpu wireless-network battery0
+modules-left = ewmh
+modules-center = date kernel
+modules-right = volume xbacklight cpu-load used-ram wireless-network wired-network battery time
 
-separator = |
+;separator = |
 
 ;==========================================================
 ;Modules A-Z
 ;==========================================================
 
-;https://github.com/polybar/polybar/wiki/Module:-battery
-[module/battery0]
+[module/battery]
 type = internal/battery
 
 battery = BAT0
 adapter = AC
 full-at = 100
 
-format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-padding = 1
+format-discharging = <ramp-capacity><label-discharging>
 format-discharging-background = ${colors.bg}
 
 ramp-capacity-0 = 
@@ -119,27 +115,19 @@ ramp-capacity-1-foreground = #B3240E
 ramp-capacity-2 = 
 ramp-capacity-2-foreground = #B3500E
 ramp-capacity-3 = 
-#ramp-capacity-3-foreground = #B3760D
 ramp-capacity-4 = 
-#ramp-capacity-4-foreground = #B39917
 ramp-capacity-5 = 
-#ramp-capacity-5-foreground = #A69D23
 ramp-capacity-6 = 
-#ramp-capacity-6-foreground = #A69F3C
 ramp-capacity-7 = 
-#ramp-capacity-7-foreground = #90A637
 ramp-capacity-8 = 
-#ramp-capacity-8-foreground = #6FA633
 ramp-capacity-9 = 
-#ramp-capacity-9-foreground = #6BA630
 ramp-capacity-10 = 
-#ramp-capacity-10-foreground = #49A62C
+ramp-capacity-margin-right = 1
 ramp-capacity-foreground = ${colors.fg}
 
 label-discharging = %percentage%%
 
-format-charging = <animation-charging> <label-charging>
-format-charging-padding = 1
+format-charging = <animation-charging><label-charging>
 format-charging-foreground = ${colors.fg}
 format-charging-background = ${colors.bg}
 
@@ -154,10 +142,9 @@ animation-charging-5 = 
 animation-charging-6 = 
 animation-charging-framerate = 750
 animation-charging-font = 2
-#animation-charging-foreground = #FBF15F
+animation-charging-margin-right = 1
 
 format-full = <label-full>
-format-full-padding = 1
 format-full-foreground = ${colors.fg}
 format-full-background = ${colors.bg}
 
@@ -165,100 +152,70 @@ label-full = ""
 
 ;======================================================================
 
-[module/battery1]
-inherit = module/battery0
-
-battery = BAT1
-
-;======================================================================
-
-;https://github.com/jaagr/polybar/wiki/Module:-cpu
-[module/cpu]
+[module/cpu-load]
 type = internal/cpu
 
 interval = 1
 
-;
+;龍
 format-prefix = 龍
 format-prefix-font = 2
+format-prefix-margin-right = 1
 
 format = <label>
-format-padding = 1
-
-label = %percentage:3%%
-
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}
 
+label = %percentage%%
+
 ;======================================================================
 
-;https://github.com/jaagr/polybar/wiki/Module:-date
 [module/date]
 type = internal/date
 
-tail = true
-
-interval = 5
-
-date = %d-%m-%y
-date-alt = %d-%D-%Y
-time = %H:%M
-
-format-prefix = " "
+format-prefix = %{A1:alacritty -e calcurse:}%{A}
 format-prefix-font = 2
+format-prefix-margin-right = 1
+format-prefix-foreground = ${colors.yellow}
 
-format-padding = 1
-
-label = %date% - %time%
-
+format = <label>
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
 
+label = %{A1:alacritty -e calcurse:}%date%%{A}
+label-underline = ${colors.yellow}
+
+date = %d-%m-%y
+
 ;======================================================================
 
-;https://github.com/polybar/polybar/wiki/Module:-xworkspaces
 [module/ewmh]
 type = internal/xworkspaces
+
+pin-workspaces = true
 
 enable-click = true
 enable-scroll = true
 
-icon-0 = doc;:
-icon-1 = dev;:
-icon-2 = sys;
-#icon-3 = <st>:research;:
-#icon-4 = <st>:coding;:
-#icon-5 = <st>:courses;:
-icon-3 = gaming;
-icon-4 = www;
-icon-5 = general;􏿽
+icon-0 = doc;
+icon-1 = dev;
+icon-2 = sys;
+icon-3 = gaming;
+icon-4 = www;
+icon-5 = general;
 
 format = <label-state>
-
-label-monitor = %name%
-label-active = %name%
-label-occupied = %name%
-label-urgent = %name%
-label-empty = %name%
-
-label-active-padding = 2
-label-active-overline = ${colors.pink}
-label-active-underline = ${colors.pink}
-label-active-background = ${colors.bg}
-label-active-foreground = ${colors.pink}
-
-label-occupied-padding = 2
-label-occupied-background = ${colors.bg}
-
-label-urgent-padding = 4
-
-label-empty-padding = 1
-
-label-occupied-foreground = ${colors.pink}
-
-
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
+
+label-active = %{F#CD5EBD}[%{F-}%name%%{F#CD5EBD}]%{F-}
+label-active-margin-right = 1
+
+label-urgent = %name%
+label-urgent-padding = 2
+
+label-empty = %name%
+label-empty-margin-right = 1
 
 ;======================================================================
 
@@ -268,108 +225,141 @@ exec = uname -r
 tail = false
 interval = 1024
 
-format-padding = 1
-
-format-prefix = " "
-format-prefix-font = 2
 ;
+format-prefix = ""
+format-prefix-font = 2
+format-prefix-foreground = ${colors.blue}
+format-prefix-underline = ${colors.bg}
+format-prefix-margin-right = 1
+format-prefix-margin-underline = ${colors.bg}
 
+format-underline = ${colors.blue}
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}
 
 ;======================================================================
 
-;https://github.com/jaagr/polybar/wiki/Module:-memory
-[module/ram]
+[module/time]
+type = internal/date
+interval = 5
+
+format = <label>
+format-foreground = ${colors.fg}
+format-background = ${colors.bg}
+
+label = %time%
+
+time = %H:%M
+
+;======================================================================
+
+[module/used-ram]
 type = internal/memory
 interval = 1
 
 ;" "
-format-prefix = " "
+format-prefix = ""
 format-prefix-font = 2
-
-format = <label>
-format-padding = 1
-
-label = %percentage_used%%
+format-prefix-margin-right = 1
 
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}
 
+format = <label>
+
+label = %percentage_used%%
+
 ;======================================================================
 
-;https://github.com/jaagr/polybar/wiki/Module:-volume
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
-format-volume-prefix = "墳 "
-format-volume-prefix-font = 2
-format-volume = <label-volume>
-format-volume-padding = 1
+master-soundcard = default
+
+interval = 5
+
+format-volume = <ramp-volume><label-volume>
 format-volume-foreground = ${colors.fg}
 format-volume-background = ${colors.bg}
 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-font = 2
+
+;ramp-headphones-0 = 
+;ramp-headphones-1 = 
+;ramp-headphones-font = 2
+
 label-volume = %percentage%%
+
+format-muted = <label-muted>
+format-muted-foreground = ${colors.fg}
+format-muted-background = ${colors.bg}
 
 label-muted = 婢
 label-muted-font = 2
 
-format-muted-padding = 1
-format-muted-foreground = ${colors.fg}
-format-muted-background = ${colors.bg}
-
 ;======================================================================
 
-;
-;https://github.com/jaagr/polybar/wiki/Module:-network
-[module/wireless-network]
+[module/wired-network]
 type = internal/network
-interface = wlp3s0
+
+interface = enp0s25
+
 interval = 3.0
 
-format-connected = <label-connected>
+acumulate-stats = true
+
+format-connected-prefix = %{A1:alacritty -e nmtui:}%{A}
 format-connected-font = 2
-format-connected-padding = 1
+format-connected-prefix-margin-right = 1
+;
+format-connected = <label-connected>
 format-connected-foreground = ${colors.fg}
 format-connected-background = ${colors.bg}
 
-label-connected = 
+label-connected = %{A1:alacritty -e nmtui:}%downspeed%%{A}
+
+;======================================================================
+
+;
+[module/wireless-network]
+type = internal/network
+
+interface = wlp3s0
+
+interval = 3.0
+
+format-connected-prefix = %{A1:alacritty -e nmtui:}%{A}
+format-connected-prefix-margin-right = 1
+
+format-connected = <label-connected>
+format-connected-foreground = ${colors.fg}
+format-connected-background = ${colors.bg}
+
+label-connected = %{A1:alacritty -e nmtui:}%essid%%{A}
 
 format-disconnected = <label-disconnected>
 format-disconnected-font = 2
-format-disconnected-padding = 1
 format-disconnected-foreground = ${colors.fg}
 format-disconnected-background = ${colors.bg}
 
-label-disconnected = 
+label-disconnected = %{A1:alacritty -e nmtui:}%{A}
 
 ;======================================================================
 
 [module/xbacklight]
-;https://github.com/jaagr/polybar/wiki/Module:-xbacklight
 type = internal/xbacklight
 
-format-prefix = " "
-format-prefix-font = 2
-format-prefix-foreground = ${colors.fg}
-format-prefix-background = ${colors.bg}
+format = <ramp><label>
 
-format = <label>
-format-padding = 1
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-font = 2
 
 label = %percentage%%
-
-format-foreground = ${colors.fg}
-format-background = ${colors.bg}
-
-;======================================================================
-
-;https://github.com/jaagr/polybar/wiki/Module:-xwindow
-[module/xwindow]
-type = internal/xwindow
-
-label = %title%
-label-maxlen = 30
 
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}
