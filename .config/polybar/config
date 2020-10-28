@@ -197,13 +197,6 @@ pin-workspaces = true
 enable-click = true
 enable-scroll = true
 
-icon-0 = doc;
-icon-1 = dev;
-icon-2 = sys;
-icon-3 = gaming;
-icon-4 = www;
-icon-5 = general;
-
 format = <label-state>
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
