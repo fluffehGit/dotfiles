@@ -54,15 +54,27 @@ format-offset =
 ;==========================================================
 
 [colors]
-;RetroWave theme:
-bg = #222629
-bg-aa = #00[222629]
+;;RetroWave theme:
+;bg = #222629
+;bg-aa = #00[222629]
+;fg = #AAAAAA
+;alert = #E81088
+;pink = #CD5EBD
+;yellow = #C1941A
+;purple = #7E52C6
+;blue = #035EE8
+
+;Dracula theme:
+bg = #282a36
+;fg = #f8f8f2
 fg = #AAAAAA
-alert = #E81088
-pink = #CD5EBD
-yellow = #C1941A
-purple = #7E52C6
-blue = #035EE8
+cyan = #8be9fd
+green = #50fa7b
+orange = #ffb86c
+pink = #ff79c6
+purple = #bd93f9
+red = #ff5555
+yellow = #f1fa8c
 
 ;==========================================================
 ;HerbstLuftWM
@@ -70,7 +82,7 @@ blue = #035EE8
 [bar/herbstBar]
 monitor = ${env:MONITOR}
 bottom = false
-fixed-center = false
+fixed-center = true
 width = 100%
 height = 30
 
@@ -82,15 +94,22 @@ foreground = ${colors.fg}
 
 line-size = 2
 
-font-0 = "mononoki Nerd Font Mono:style=Regular:size=12;1"
-font-1 = "mononoki Nerd Font Mono:style=Regular:size=20;3"
-font-2 = "Material Icons:size=15;4"
+border-top-size = 4
+border-left-size = 4
+border-right-size = 4
+border-bottom-size = 2
+
+font-0 = "mononoki Nerd Font Mono:style=Regular:size=12;3"
+font-1 = "mononoki Nerd Font Mono:style=Regular:size=20;5"
+font-2 = "mononoki Nerd Font Mono:style=Regular:size=12;2"
+font-3 = "mononoki Nerd Font Mono:style=Regular:size=15;3"
+font-4 = "mononoki Nerd Font Mono:style=Regular:size=25;5"
+font-5 = "mononoki Nerd Font Mono:style=Regular:size=17;4"
 
 enable-ipc = true
 
-modules-left = ewmh
-modules-center = date kernel
-modules-right = volume xbacklight cpu-load used-ram wireless-network wired-network battery time
+modules-left = ewmh kernel
+modules-right = volume xbacklight cpu-load used-ram wireless-network wired-network battery date
 
 ;separator = |
 
@@ -103,7 +122,7 @@ type = internal/battery
 
 battery = BAT0
 adapter = AC
-full-at = 100
+full-at = 99
 
 format-discharging = <ramp-capacity><label-discharging>
 format-discharging-background = ${colors.bg}
@@ -123,6 +142,7 @@ ramp-capacity-8 = 
 ramp-capacity-9 = 
 ramp-capacity-10 = 
 ramp-capacity-margin-right = 1
+ramp-capacity-font = 1
 ramp-capacity-foreground = ${colors.fg}
 
 label-discharging = %percentage%%
@@ -141,10 +161,12 @@ animation-charging-4 = 
 animation-charging-5 = 
 animation-charging-6 = 
 animation-charging-framerate = 750
-animation-charging-font = 2
+animation-charging-font = 3
 animation-charging-margin-right = 1
 
 format-full = <label-full>
+format-full-font = 1
+format-full-offset = -2
 format-full-foreground = ${colors.fg}
 format-full-background = ${colors.bg}
 
@@ -173,19 +195,21 @@ label = %percentage%%
 [module/date]
 type = internal/date
 
+interval = 5
+
 format-prefix = %{A1:alacritty -e calcurse:}%{A}
 format-prefix-font = 2
 format-prefix-margin-right = 1
-format-prefix-foreground = ${colors.yellow}
 
 format = <label>
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
 
-label = %{A1:alacritty -e calcurse:}%date%%{A}
-label-underline = ${colors.yellow}
+label = %{A1:alacritty -e calcurse:}%date%%{A} %{T2}%{T-} %time%
 
 date = %d-%m-%y
+
+time = %H:%M
 
 ;======================================================================
 
@@ -201,7 +225,9 @@ format = <label-state>
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
 
-label-active = %{F#CD5EBD}[%{F-}%name%%{F#CD5EBD}]%{F-}
+;label-active = %{F#ff79c6}%{T4}[%{T-}%{F-}%{u#ff79c6}%{+u}%name%%{-u}%{F#ff79c6}%{T4}]%{T-}%{F-}
+label-active = %name%
+label-active-underline = ${colors.pink}
 label-active-margin-right = 1
 
 label-urgent = %name%
@@ -219,30 +245,21 @@ tail = false
 interval = 1024
 
 ;
-format-prefix = ""
-format-prefix-font = 2
-format-prefix-foreground = ${colors.blue}
-format-prefix-underline = ${colors.bg}
-format-prefix-margin-right = 1
-format-prefix-margin-underline = ${colors.bg}
+;format-prefix = 
+;format-prefix-font = 5
+;format-prefix-foreground = ${colors.cyan}
+;format-prefix-underline = ${colors.bg}
+;format-prefix-margin-right = 1
+;format-prefix-margin-underline = ${colors.bg}
+;format-prefix-margin-right = 1
 
-format-underline = ${colors.blue}
+format-prefix = `
+format-prefix-font = 4
+
+format-offset = -5
+format-margin = 0
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}
-
-;======================================================================
-
-[module/time]
-type = internal/date
-interval = 5
-
-format = <label>
-format-foreground = ${colors.fg}
-format-background = ${colors.bg}
-
-label = %time%
-
-time = %H:%M
 
 ;======================================================================
 
@@ -275,10 +292,13 @@ format-volume = <ramp-volume><label-volume>
 format-volume-foreground = ${colors.fg}
 format-volume-background = ${colors.bg}
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-font = 2
+ramp-volume-0 = 奄
+ramp-volume-0-font = 1
+ramp-volume-1 = 奔
+ramp-volume-1-font = 6
+ramp-volume-2 = 墳
+ramp-volume-font = 2
+ramp-volume-margin-right = 1
 
 ;ramp-headphones-0 = 
 ;ramp-headphones-1 = 
@@ -324,7 +344,8 @@ interface = wlp3s0
 
 interval = 3.0
 
-format-connected-prefix = %{A1:alacritty -e nmtui:}%{A}
+format-connected-prefix = %{A1:alacritty -e nmtui:}直%{A}
+format-connected-prefix-font = 2
 format-connected-prefix-margin-right = 1
 
 format-connected = <label-connected>
@@ -338,7 +359,7 @@ format-disconnected-font = 2
 format-disconnected-foreground = ${colors.fg}
 format-disconnected-background = ${colors.bg}
 
-label-disconnected = %{A1:alacritty -e nmtui:}%{A}
+label-disconnected = %{A1:alacritty -e nmtui:}睊%{A}
 
 ;======================================================================
 
@@ -351,8 +372,9 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-font = 2
+ramp-margin-right = 1
 
-label = %percentage%%
+label = %{A1:redshift:}%percentage%%%{A}
 
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}
