@@ -12,17 +12,6 @@ else
     echo ".bash_env_vars not found at:" $HOME
 fi
 
-# xsecurelock settings
-if type "xsecurelock" >/dev/null; then
-    if [[ -f $XDG_CONFIG_HOME/xsecurelock.conf ]]; then
-        . $XDG_CONFIG_HOME/xsecurelock.conf
-    else
-        echo "xsecurelock.conf not present at:" $XDG_CONFIG_HOME
-    fi
-else
-    echo "xsecurelock not installed!"
-fi
-
 # Sourcing aliases file
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
