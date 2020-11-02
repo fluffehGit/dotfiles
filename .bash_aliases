@@ -1,10 +1,20 @@
+#File exploration
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias sleep='systemctl suspend'
-alias majoc='herbstclient detect_monitors && xrandr --output HDMI1 --auto --mode 1600x900 --same-as eDP1'
+
+#File manipulation
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias rmswap='rm -i $(find /home/$USER -name "*.swp")'
+
+#Sys
+alias sleep='systemctl suspend'
+
+#Git
 alias gitcfg='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+#WMs
+alias hc='herbstclient'
+
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'

@@ -254,7 +254,7 @@ interval = 1024
 format-prefix = `
 format-prefix-font = 4
 
-format-offset = -13
+format-offset = -12
 format-margin = 0
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}
