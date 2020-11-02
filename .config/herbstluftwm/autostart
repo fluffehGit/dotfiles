@@ -22,8 +22,6 @@ hc() {
 
 hc emit_hook reload
 
-#xsetroot -solid '#5A8E3A'
-
 # remove all existing keybindings
 hc keyunbind --all
 
@@ -131,11 +129,16 @@ hc keybind $Mod-space                                                           
                , cycle_layout +1
 hc keybind $Mod-g set_layout grid
 
+for tag_name in ${tag_names[@]}
+do
+    hc load $tag_name "(clients horizontal:0)"
+done
+
 # mouse
 hc mouseunbind --all
 hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Control-Button1 resize
 hc mousebind $Mod-Button2 zoom
-hc mousebind $Mod-Button3 resize
 
 # focus
 hc keybind $Mod-BackSpace   cycle_monitor
