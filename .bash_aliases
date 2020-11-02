@@ -1,6 +1,5 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias lock='xsecurelock'
 alias sleep='systemctl suspend'
 alias majoc='herbstclient detect_monitors && xrandr --output HDMI1 --auto --mode 1600x900 --same-as eDP1'
 alias cp='cp -i'

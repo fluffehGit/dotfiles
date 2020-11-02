@@ -20,14 +20,10 @@
 ;Global Settings
 ;==========================================================
 
-;Below settings taken from:
-;https://github.com/polybar/polybar/wiki/Configuration#global-wm-settings
-;[global/wm]
+[global/wm]
 margin-top = 0
 margin-bottom = 0
 
-;Below taken from
-;https://github.com/jaagr/polybar/wiki/Configuration#application-settings
 [settings]
 throttle-output = 5
 throttle-output-for = 10
@@ -65,13 +61,15 @@ format-offset =
 ;blue = #035EE8
 
 ;Dracula theme:
-bg = #282a36
+;bg = #282a36
+bg = #E6282a36
 ;fg = #f8f8f2
 fg = #AAAAAA
 cyan = #8be9fd
 green = #50fa7b
 orange = #ffb86c
-pink = #ff79c6
+;pink = #ff79c6
+pink = #CD5EBD
 purple = #bd93f9
 red = #ff5555
 yellow = #f1fa8c
@@ -120,7 +118,7 @@ modules-right = volume xbacklight cpu-load used-ram wireless-network wired-netwo
 [module/battery]
 type = internal/battery
 
-battery = BAT0
+battery = BAT1
 adapter = AC
 full-at = 99
 
@@ -161,7 +159,7 @@ animation-charging-4 = 
 animation-charging-5 = 
 animation-charging-6 = 
 animation-charging-framerate = 750
-animation-charging-font = 3
+animation-charging-font = 2
 animation-charging-margin-right = 1
 
 format-full = <label-full>
@@ -256,7 +254,7 @@ interval = 1024
 format-prefix = `
 format-prefix-font = 4
 
-format-offset = -5
+format-offset = -13
 format-margin = 0
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}
