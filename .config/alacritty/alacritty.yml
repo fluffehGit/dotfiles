@@ -142,7 +142,7 @@ font:
 
   # Point size
   #  size: 9.0
-  size: 11.0
+  size: 8.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -174,8 +174,7 @@ colors:
     #    background: '0x1c1e26'
     #    foreground: '0xe0e0e0'
 
-    background: '#222629'
-      #foreground: '#61892F'
+    background: '#282a36'
     foreground: '#86C232'
     # Bright and dim foreground colors
     #
@@ -319,7 +318,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.9
+background_opacity: 0.95
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
