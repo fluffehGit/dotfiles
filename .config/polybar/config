@@ -78,7 +78,9 @@ yellow = #f1fa8c
 ;HerbstLuftWM
 ;==========================================================
 [bar/herbstBar]
-monitor = ${env:MONITOR}
+;monitor = ${env:MONITOR}
+monitor = HDMI1
+monitor-fallback = eDP1
 bottom = false
 fixed-center = true
 width = 100%
@@ -118,7 +120,7 @@ modules-right = volume xbacklight cpu-load used-ram wireless-network wired-netwo
 [module/battery]
 type = internal/battery
 
-battery = BAT1
+battery = BAT0
 adapter = AC
 full-at = 99
 
@@ -214,10 +216,20 @@ time = %H:%M
 [module/ewmh]
 type = internal/xworkspaces
 
-pin-workspaces = true
+pin-workspaces = false
 
 enable-click = true
 enable-scroll = true
+
+icon-0 = 1:doc1;
+icon-1 = 2:dev;
+icon-2 = 3:doc2;
+icon-3 = 4:sys;
+icon-4 = 5:doc3;
+icon-5 = 6:conf;
+icon-6 = 7:chat;
+icon-7 = 8:www;
+icon-8 = 9:general;
 
 format = <label-state>
 format-background = ${colors.bg}
