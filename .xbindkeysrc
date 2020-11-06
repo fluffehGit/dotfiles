@@ -73,10 +73,10 @@
 "pactl set-sink-volume @DEFAULT_SINK@ -5%"
   XF86AudioLowerVolume
 # Audio Volume Up
-"pactl set-sink-volume @DEFAULT_SINK@ +10000"
+"pactl set-sink-volume @DEFAULT_SINK@ +15%"
   Control+XF86AudioRaiseVolume
 # Audio Volume Down
-"pactl set-sink-volume @DEFAULT_SINK@ -10000"
+"pactl set-sink-volume @DEFAULT_SINK@ -15%"
   Control+XF86AudioLowerVolume
 # Audio Mute/Unmute
 "pactl set-sink-mute @DEFAULT_SINK@ toggle"
@@ -93,6 +93,10 @@
 # Brightness Down
 "xbacklight -dec 5%"
   XF86MonBrightnessDown
+
+# Screenshot
+"sleep 0.2; scrot -s"
+  Mod4+Super_L+Shift+s
 
 ##################################
 # End of xbindkeys configuration #
