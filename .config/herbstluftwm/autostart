@@ -39,7 +39,7 @@ hc keybind $Mod-Shift-c close
 
 # spawning apps
 hc keybind $Mod-Return spawn $myTerm
-hc keybind $Mod-Shift-Return spawn dmenu_run
+hc keybind $Mod-Shift-Return spawn dmenu_run -i -l 1 -p "Run:" -fn "Mononoki Nerd Font:10" -nb "#282a36" -nf "#AAAAAA" -sb "#cd5ebd"
 hc keybind $Mod-Shift-i spawn $myBrowser
 hc keybind $Mod-Shift-a spawn pavucontrol
 
