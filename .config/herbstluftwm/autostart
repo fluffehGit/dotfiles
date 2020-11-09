@@ -178,11 +178,10 @@ hc set focus_crosses_monitor_boundaries true
 hc set focus_follows_mouse true
 hc set swap_monitors_to_get_tag true
 hc set auto_detect_panels true
-#TBD
-#hc set auto_detect_monitors true
 
 # attributes
 hc attr theme.active.border_width 1
+hc attr theme.active.color "#CD5EBD"
 
 # rules
 hc unrule -F
