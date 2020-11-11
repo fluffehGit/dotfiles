@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Sourcing env variables file
-if [[ -f ~/.bash_env_vars ]]; then
+if [ -f ~/.bash_env_vars ]; then
     . ~/.bash_env_vars
 else
     echo ".bash_env_vars not found at:" $HOME
@@ -17,6 +17,13 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 else
     echo ".bash_aliases not found at:" $HOME
+fi
+
+# Sourcing functions file
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+else
+    echo ".bash_functions not found at:" $HOME
 fi
 
 # Setting up the prompt

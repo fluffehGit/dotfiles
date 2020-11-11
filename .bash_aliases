@@ -17,4 +17,7 @@ alias gitcfg='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 #WMs
 alias hc='herbstclient'
 
+#Wacom
+alias ts='tabletDisplay $1'
+
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
