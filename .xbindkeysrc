@@ -95,7 +95,7 @@
   XF86MonBrightnessDown
 
 # Screenshot
-"sleep 0.2; scrot --select --line style=dash,width=2,color="#CD5EBD" --freeze 'Screenshot-%d-%m-%Y.png' -e 'mv $f /home/fluffeh/Pictures/Screenshots'"
+"sleep 0.2; scrot --select --line style=dash,width=2,color="#CD5EBD" --freeze 'Screenshot-%d-%m-%Y-@%H-%M-%S.png' -e 'mv $f /home/fluffeh/Pictures/Screenshots'"
   Mod4+Super_L+Shift+s
 
 ##################################
