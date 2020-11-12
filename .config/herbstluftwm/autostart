@@ -39,7 +39,7 @@ hc keybind $Mod-Shift-c close
 
 # spawning apps
 hc keybind $Mod-Return spawn $myTerm
-hc keybind $Mod-Shift-Return spawn dmenu_run -i -l 1 -p "Run:" -fn "Mononoki Nerd Font:10" -nb "#282a36" -nf "#AAAAAA" -sb "#cd5ebd"
+hc keybind $Mod-Shift-Return spawn dmenu_run -i -p "Run:" -fn "Mononoki Nerd Font:10" -nb "#282a36" -nf "#AAAAAA" -sb "#cd5ebd"
 hc keybind $Mod-Shift-i spawn $myBrowser
 hc keybind $Mod-Shift-a spawn pavucontrol
 
@@ -83,7 +83,7 @@ hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
 # tags
-tag_names=( "1:doc1" "2:dev" "3:doc2" "4:sys" "5:doc3" "6:conf" "7:chat" "8:www" "9:general" )
+tag_names=( "doc1" "doc2" "doc3" "dev" "sys" "conf" "chat" "www" "general" )
 tag_keys=( {1..9} 0 )
 
 hc rename default "${tag_names[0]}" || true
@@ -155,7 +155,7 @@ hc keybind $Mod-i jumpto urgent
 
 # Frames
 hc set frame_gap 0
-hc set frame_padding 0
+hc set frame_padding 3
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
 hc set frame_border_width 0
@@ -163,7 +163,7 @@ hc set always_show_frame false
 hc set default_frame_layout 1
 
 # Windows
-hc set window_gap 4
+hc set window_gap 10
 hc set window_border_width 0
 
 # Floating
@@ -176,6 +176,7 @@ hc set raise_on_click true
 # General
 hc set focus_crosses_monitor_boundaries true
 hc set focus_follows_mouse true
+hc set mouse_recenter_gap 1000
 hc set swap_monitors_to_get_tag true
 hc set auto_detect_panels true
 
