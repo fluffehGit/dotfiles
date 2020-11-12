@@ -39,6 +39,5 @@ fi
 picom &
 xbindkeys &
 redshift &
-#libinput-gestures-setup start &
 nitrogen --restore &
 exec herbstluftwm --locked
