@@ -9,7 +9,7 @@ alias rm='rm -i'
 alias rmswap='rm -i $(find /home/$USER -name "*.swp")'
 
 #Sys
-alias sleep='systemctl suspend'
+alias suspend='systemctl suspend'
 
 #Git
 alias gitcfg='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
