@@ -174,7 +174,7 @@ colors:
     #    background: '0x1c1e26'
     #    foreground: '0xe0e0e0'
 
-    background: '#282a36'
+    background: '#1D1E19'
     foreground: '#86C232'
     # Bright and dim foreground colors
     #

@@ -39,7 +39,7 @@ hc keybind $Mod-Shift-c close
 
 # spawning apps
 hc keybind $Mod-Return spawn $myTerm
-hc keybind $Mod-Shift-Return spawn dmenu_run -i -p "Run:" -fn "Mononoki Nerd Font:10" -nb "#282a36" -nf "#AAAAAA" -sb "#cd5ebd"
+hc keybind $Mod-Shift-Return spawn dmenu_run -i -p "Run:" -fn "Mononoki Nerd Font:10" -nb "#1D1E19" -nf "#625F4B"  -sb "#53D1ED" -sf "#625F4B"
 hc keybind $Mod-Shift-i spawn $myBrowser
 hc keybind $Mod-Shift-a spawn pavucontrol
 
@@ -155,7 +155,7 @@ hc keybind $Mod-i jumpto urgent
 
 # Frames
 hc set frame_gap 0
-hc set frame_padding 3
+hc set frame_padding 2
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
 hc set frame_border_width 0
@@ -163,7 +163,7 @@ hc set always_show_frame false
 hc set default_frame_layout 1
 
 # Windows
-hc set window_gap 10
+hc set window_gap 5
 hc set window_border_width 0
 
 # Floating
@@ -182,7 +182,7 @@ hc set auto_detect_panels true
 
 # attributes
 hc attr theme.active.border_width 1
-hc attr theme.active.color "#CD5EBD"
+hc attr theme.active.color "#96E309"
 
 # rules
 hc unrule -F
@@ -195,6 +195,8 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 
+hc rule class=Pavucontrol floating=on
+
 hc set tree_style '╾│ ├└╼─┐'
 
 # unlock, just to be sure
@@ -205,11 +207,17 @@ hc unlock
 # or simply:
 hc detect_monitors
 
+if [ -z "$(pgrep -x polybar)" ]; then
+    polybar --reload herbstBar
+else
+    polybar-msg cmd restart
+fi
+
 
 # find the panel
-panel=~/.config/herbstluftwm/panel.sh
-[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-for monitor in $(hc list_monitors | cut -d: -f1) ; do
-    # start it on each monitor
-    "$panel" "$monitor" &
-done
+#panel=~/.config/herbstluftwm/panel.sh
+#[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
+#for monitor in $(hc list_monitors | cut -d: -f1) ; do
+#    # start it on each monitor
+#    "$panel" "$monitor" &
+#done
