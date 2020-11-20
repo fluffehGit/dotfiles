@@ -1,23 +1,26 @@
-#File exploration
+# File exploration
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-#File manipulation
+# File manipulation
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 alias rmswap='rm -i $(find /home/$USER -name "*.swp")'
 
-#Sys
+# Sys
 alias suspend='systemctl suspend'
 
-#Git
+# Git
 alias gitcfg='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
-#WMs
+# WMs
 alias hc='herbstclient'
 
-#Wacom
+# Wacom
 alias ts='tabletDisplay $1'
+
+# Systemd
+alias se='systemctl start $1 && systemd enable $1'
 
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
