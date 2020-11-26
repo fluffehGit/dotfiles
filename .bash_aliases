@@ -10,6 +10,7 @@ alias rmswap='rm -i $(find /home/$USER -name "*.swp")'
 
 # Sys
 alias suspend='systemctl suspend'
+alias open='xdg-open'
 
 # Git
 alias gitcfg='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
