@@ -30,7 +30,6 @@ hc keyunbind --all
 #Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 myTerm=alacritty
-myBrowser=firefox
 
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
@@ -39,8 +38,9 @@ hc keybind $Mod-Shift-c close
 
 # spawning apps
 hc keybind $Mod-Return spawn $myTerm
-hc keybind $Mod-Shift-Return spawn dmenu_run -i -p "Run:" -fn "Mononoki Nerd Font:10" -nb "#1D1E19" -nf "#625F4B"  -sb "#53D1ED" -sf "#625F4B"
-hc keybind $Mod-Shift-i spawn $myBrowser
+hc keybind $Mod-Shift-Return spawn dmenu_run -i -p "Run >" -fn "Mononoki Nerd Font:10" -nb "#2C2E34" -nf "#E2E2E3"  -sb "#9ED072" -sf "#FFFFFF"
+hc keybind $Mod-Shift-i spawn firefox
+hc keybind $Mod-Shift-p spawn firefox --private-window
 hc keybind $Mod-Shift-a spawn pavucontrol
 
 # basic movement in tiling and floating mode
@@ -181,8 +181,8 @@ hc set swap_monitors_to_get_tag true
 hc set auto_detect_panels true
 
 # attributes
-hc attr theme.active.border_width 1
-hc attr theme.active.color "#96E309"
+hc attr theme.active.border_width 2
+hc attr theme.active.color "#9ED072"
 
 # rules
 hc unrule -F
@@ -212,12 +212,3 @@ if [ -z "$(pgrep -x polybar)" ]; then
 else
     polybar-msg cmd restart
 fi
-
-
-# find the panel
-#panel=~/.config/herbstluftwm/panel.sh
-#[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-#for monitor in $(hc list_monitors | cut -d: -f1) ; do
-#    # start it on each monitor
-#    "$panel" "$monitor" &
-#done
