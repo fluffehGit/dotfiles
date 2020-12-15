@@ -1,0 +1,24 @@
+type = internal/network
+
+interface = wlp3s0
+
+interval = 3.0
+
+format-connected-prefix = %{A1:alacritty -e nmtui:}直%{A}
+format-connected-prefix-font = 4
+format-connected-prefix-margin-right = 1
+
+format-connected = <label-connected>
+format-connected-foreground = ${colors.fg}
+format-connected-background = ${colors.bg}
+
+label-connected = %{A1:alacritty -e nmtui:}%essid%%{A}
+
+format-disconnected = <label-disconnected>
+format-disconnected-font = 4
+format-disconnected-foreground = ${colors.fg}
+format-disconnected-background = ${colors.bg}
+
+label-disconnected = %{A1:alacritty -e nmtui:}睊%{A}
+
+; vim: filetype=dosini

@@ -1,0 +1,16 @@
+type = internal/xbacklight
+
+format = <ramp><label>
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-font = 4
+ramp-margin-right = 1
+
+label = %{A1:redshift:}%percentage%%%{A}
+
+format-foreground = ${colors.fg}
+format-background = ${colors.bg}
+
+; vim: filetype=dosini

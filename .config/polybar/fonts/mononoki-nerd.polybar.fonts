@@ -1,0 +1,8 @@
+;font-0 = "mononoki Nerd Font Mono:style=Regular:size=12;2"
+font-0 = "mononoki Nerd Font Mono:style=Regular:size=12;2"
+font-1 = "mononoki Nerd Font Mono:style=Regular:size=15;3"
+font-2 = "mononoki Nerd Font Mono:style=Regular:size=17;3"
+font-3 = "mononoki Nerd Font Mono:style=Regular:size=20;3"
+font-4 = "mononoki Nerd Font Mono:style=Regular:size=25;5"
+
+; vim: filetype=dosini

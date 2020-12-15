@@ -1,0 +1,56 @@
+type = internal/battery
+
+battery = BAT0
+adapter = AC
+full-at = 99
+
+format-discharging = <ramp-capacity><label-discharging>
+format-discharging-background = ${colors.bg}
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = #990E09
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = #B3240E
+ramp-capacity-2 = 
+ramp-capacity-2-foreground = #B3500E
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-10 = 
+ramp-capacity-margin-right = 1
+ramp-capacity-font = 1
+ramp-capacity-foreground = ${colors.fg}
+
+label-discharging = %percentage%%
+
+format-charging = <animation-charging><label-charging>
+format-charging-foreground = ${colors.fg}
+format-charging-background = ${colors.bg}
+
+label-charging = %percentage%%
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+animation-charging-framerate = 750
+animation-charging-font = 4
+animation-charging-margin-right = 1
+
+format-full = <label-full>
+format-full-font = 1
+format-full-offset = -2
+format-full-foreground = ${colors.fg}
+format-full-background = ${colors.bg}
+
+label-full = ""
+label-full-margin-right = 1
+
+; vim: filetype=dosini

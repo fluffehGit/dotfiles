@@ -1,0 +1,16 @@
+type = internal/cpu
+
+interval = 1
+
+;龍
+format-prefix = 龍
+format-prefix-font = 4
+format-prefix-margin-right = 1
+
+format = <label>
+format-foreground = ${colors.fg}
+format-background = ${colors.bg}
+
+label = %percentage%%
+
+; vim: filetype=dosini

@@ -1,0 +1,23 @@
+type = custom/script
+exec = uname -r
+tail = false
+interval = 1024
+
+;
+;format-prefix = 
+;format-prefix-font = 5
+;format-prefix-foreground = ${colors.blue}
+;format-prefix-underline = ${colors.bg}
+;format-prefix-margin-right = 1
+;format-prefix-margin-underline = ${colors.bg}
+;format-prefix-margin-right = 1
+
+format-prefix = `
+format-prefix-font = 2
+
+format-offset = -12
+format-margin = 0
+format-foreground = ${colors.fg}
+format-background = ${colors.bg}
+
+; vim: filetype=dosini

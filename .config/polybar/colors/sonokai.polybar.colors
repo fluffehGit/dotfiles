@@ -1,0 +1,9 @@
+bg = #E62C2E34
+fg = #E2E2E3
+blue = #76CCE0
+green = #9ED072
+red = #FC5D7C
+purple = #B39DF3
+yellow = #E7C664
+
+; vim: filetype=dosini

@@ -1,0 +1,13 @@
+type = custom/script
+interval = 120
+
+exec = echo ""
+
+format-font = 5
+format-offset = 5
+format-foreground = ${colors.blue}
+format-background = ${colors.bg}
+
+click-left = "jgmenu_run >/dev/null 2>&1 &"
+
+; vim: filetype=dosini

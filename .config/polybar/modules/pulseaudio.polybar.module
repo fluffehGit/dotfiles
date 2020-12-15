@@ -1,0 +1,28 @@
+type = internal/pulseaudio
+
+use-ui-max = false
+
+interval = 5
+
+format-volume = %{A1:pavucontrol:}<ramp-volume><label-volume>%{A}
+format-volume-foreground = ${colors.fg}
+format-volume-background = ${colors.bg}
+
+ramp-volume-0 = 奄
+ramp-volume-0-font = 1
+ramp-volume-1 = 奔
+ramp-volume-1-font = 3
+ramp-volume-2 = 墳
+ramp-volume-font = 4
+ramp-volume-margin-right = 1
+
+label-volume = %percentage%%
+
+format-muted = %{A1:pavucontrol:}<label-muted>%{A}
+format-muted-foreground = ${colors.fg}
+format-muted-background = ${colors.bg}
+
+label-muted = 婢
+label-muted-font = 4
+
+; vim: filetype=dosini

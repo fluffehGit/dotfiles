@@ -1,0 +1,36 @@
+type = internal/xworkspaces
+
+pin-workspaces = false
+
+enable-click = true
+enable-scroll = true
+
+icon-0 = doc1;
+icon-1 = doc2;
+icon-2 = doc3;
+icon-3 = dev;
+icon-4 = sys;
+icon-5 = conf;
+icon-6 = chat;
+icon-7 = www;
+icon-8 = general;
+
+format = <label-state>
+format-offset = 5
+format-background = ${colors.bg}
+format-foreground = ${colors.fg}
+
+label-active = <%name%>
+label-active-foreground = ${colors.green}
+label-active-margin-right = 1
+
+label-occupied = |%name%|
+label-occupied-underline = ${colors.green}
+
+label-urgent = %name%
+label-urgent-padding = 2
+
+label-empty = %name%
+label-empty-margin-right = 1
+
+; vim: filetype=dosini

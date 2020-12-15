@@ -1,0 +1,19 @@
+type = internal/network
+
+interface = enp0s25
+
+interval = 3.0
+
+acumulate-stats = true
+
+format-connected-prefix = %{A1:alacritty -e nmtui:}%{A}
+format-connected-font = 4
+format-connected-prefix-margin-right = 1
+;
+format-connected = <label-connected>
+format-connected-foreground = ${colors.fg}
+format-connected-background = ${colors.bg}
+
+label-connected = %{A1:alacritty -e nmtui:}%downspeed%%{A}
+
+; vim: filetype=dosini

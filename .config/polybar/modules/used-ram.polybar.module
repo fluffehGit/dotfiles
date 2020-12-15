@@ -1,0 +1,16 @@
+type = internal/memory
+interval = 1
+
+;" "
+format-prefix = ""
+format-prefix-font = 4
+format-prefix-margin-right = 1
+
+format-foreground = ${colors.fg}
+format-background = ${colors.bg}
+
+format = <label>
+
+label = %percentage_used%%
+
+; vim: filetype=dosini
