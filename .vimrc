@@ -13,6 +13,7 @@ call vundle#begin()
     Plugin 'itchyny/lightline.vim'
     Plugin 'ap/vim-css-color'
     Plugin 'sainnhe/sonokai'
+    Plugin 'preservim/nerdtree'
 
 call vundle#end()
 
@@ -27,6 +28,7 @@ set wildmenu
 set wildignore+=*.jpg,*.png,*.gif,*.bmp,*.ico,*.pdf
 set wildignore+=*.tmp,*.swp
 set relativenumber
+set number
 set laststatus=2
 set noshowmode
 set title
@@ -34,8 +36,11 @@ set incsearch
 set hlsearch
 set nobackup
 
-syntax enable
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntax and filetype
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
+syntax enable
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -48,6 +53,12 @@ set expandtab
 set smarttab
 set shiftwidth=4
 set tabstop=4
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <C-n> :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Convet text to UTF-8

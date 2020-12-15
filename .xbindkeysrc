@@ -37,67 +37,46 @@
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-# Examples of commands:
-
-#"xbindkeys_show"
-#  control+shift + q
-
-# set directly keycode (here control + f with my keyboard)
-#"xterm"
-#  c:41 + m:0x4
-
-# specify a mouse button
-#"xterm"
-#  control + b:2
-
-#"xterm -geom 50x20+20+20"
-#   Shift+Mod2+alt + s
-#
-## set directly keycode (here control+alt+mod2 + f with my keyboard)
-#"xterm"
-#  alt + c:0x29 + m:4 + mod2
-#
-## Control+Shift+a  release event starts rxvt
-#"rxvt"
-#  release+control+shift + a
-#
-## Control + mouse button 2 release event starts rxvt
-#"rxvt"
-#  Control + b:2 + Release
-
 ## Audio Volume Control
 # Audio Volume Up
 "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-  XF86AudioRaiseVolume
+    XF86AudioRaiseVolume
 # Audio Volume Down
 "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-  XF86AudioLowerVolume
+    XF86AudioLowerVolume
 # Audio Volume Up
 "pactl set-sink-volume @DEFAULT_SINK@ +15%"
-  Control+XF86AudioRaiseVolume
+    Control+XF86AudioRaiseVolume
 # Audio Volume Down
 "pactl set-sink-volume @DEFAULT_SINK@ -15%"
-  Control+XF86AudioLowerVolume
+    Control+XF86AudioLowerVolume
 # Audio Mute/Unmute
 "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-  XF86AudioMute
+    XF86AudioMute
 
 # Microphone Mute/Unmute
 "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-  XF86AudioMicMute
+    XF86AudioMicMute
 
 ## Brightness Control
 # Brightness Up
 "xbacklight -inc 5%"
-  XF86MonBrightnessUp
+    XF86MonBrightnessUp
 # Brightness Down
 "xbacklight -dec 5%"
-  XF86MonBrightnessDown
+    XF86MonBrightnessDown
 
 # Screenshot
 "sleep 0.2; scrot --select --line style=dash,width=2,color="#CD5EBD" --freeze 'Screenshot-%d-%m-%Y-@%H-%M-%S.png' -e 'mv $f /home/fluffeh/Pictures/Screenshots'"
-  Mod4+Super_L+Shift+s
+    Mod4+Shift+s
 
+## System Controls
+#Suspend
+"systemctl suspend"
+    Mod4+Control+s
+#Reboot
+"systemctl reboot"
+    Mod4+Control+r
 ##################################
 # End of xbindkeys configuration #
 ##################################
