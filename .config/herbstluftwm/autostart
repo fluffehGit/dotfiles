@@ -38,7 +38,8 @@ hc keybind $Mod-Shift-c close
 
 # spawning apps
 hc keybind $Mod-Return spawn $myTerm
-hc keybind $Mod-Shift-Return spawn dmenu_run -i -p "Run >" -fn "Mononoki Nerd Font:10" -nb "#2C2E34" -nf "#E2E2E3"  -sb "#9ED072" -sf "#FFFFFF"
+hc keybind $Mod-Shift-Return spawn rofi -show run
+hc keybind $Mod-Alt-Tab spawn rofi -show window
 hc keybind $Mod-Shift-i spawn firefox
 hc keybind $Mod-Shift-p spawn firefox --private-window
 hc keybind $Mod-Shift-a spawn pavucontrol
