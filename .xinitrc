@@ -38,7 +38,7 @@ fi
 
 xsetroot -solid "#1D1E19"
 
-#picom --experimental-backend &
+picom &
 xbindkeys &
 redshift &
 nitrogen --restore &
