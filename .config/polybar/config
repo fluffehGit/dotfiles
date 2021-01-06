@@ -52,7 +52,7 @@ include-file = ~/.config/polybar/colors/sonokai.polybar.colors
 ;HerbstLuftWM
 ;==========================================================
 [bar/herbstBar]
-;monitor = HDMI1
+monitor = HDMI1
 monitor-fallback = eDP1
 bottom = false
 fixed-center = true
@@ -73,7 +73,7 @@ enable-ipc = true
 
 modules-left = ewmh
 modules-center = date
-modules-right = volume xbacklight cpu-load used-ram wireless-network wired-network battery
+modules-right = volume xbacklight cpu-load used-ram wireless-network wired-network battery battery2
 
 ;==========================================================
 ;Modules A-Z
@@ -81,6 +81,10 @@ modules-right = volume xbacklight cpu-load used-ram wireless-network wired-netwo
 
 [module/battery]
 include-file = ~/.config/polybar/modules/battery.polybar.module
+
+[module/battery2]
+inherit = module/battery
+battery = BAT1
 
 [module/cpu-load]
 include-file = ~/.config/polybar/modules/cpu-load.polybar.module

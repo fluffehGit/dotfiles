@@ -24,8 +24,8 @@ label-active = <%name%>
 label-active-foreground = ${colors.green}
 label-active-margin-right = 1
 
-label-occupied = |%name%|
-label-occupied-underline = ${colors.green}
+label-occupied = %{F#9ED072}|%{F-}%name%%{F#9ED072}|%{F-}
+label-occupied-margin-right = 1
 
 label-urgent = %name%
 label-urgent-padding = 2
