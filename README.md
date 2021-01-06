@@ -19,7 +19,7 @@ This is a collection of my presonal configuration files. As my system expands so
     - herbstluftwm
 - Status bars
     - polybar
-- Medi Players:
+- Media Players:
     - vlc
 
 
