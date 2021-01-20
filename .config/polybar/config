@@ -27,7 +27,6 @@ margin-bottom = 0
 [settings]
 throttle-output = 5
 throttle-output-for = 10
-throttle-input-for = 30
 screenchange-reload = true
 compositing-background = source
 compositing-foreground = over
@@ -35,7 +34,7 @@ compositing-overline = over
 compositing-underlne = over
 compositing-border = over
 
-; Define fallback values used by all module formats
+
 format-foreground = #FF0000
 format-background = #00FF00
 format-underline =
@@ -67,13 +66,22 @@ foreground = ${colors.fg}
 
 line-size = 2
 
+tray-position = right
+tray-detached = false
+tray-maxsize = 20
+tray-background = ${colors.bg}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1
+
 include-file = ~/.config/polybar/fonts/mononoki-nerd.polybar.fonts
 
 enable-ipc = true
 
-modules-left = ewmh
-modules-center = date
-modules-right = volume xbacklight cpu-load used-ram wireless-network wired-network battery battery2
+modules-left = volume xbacklight wireless-network wired-network date-time
+modules-center = ewmh
+modules-right = cpu-load used-ram battery battery2
 
 ;==========================================================
 ;Modules A-Z
@@ -86,10 +94,15 @@ include-file = ~/.config/polybar/modules/battery.polybar.module
 inherit = module/battery
 battery = BAT1
 
+format-full-margin-right = 1
+
 [module/cpu-load]
 include-file = ~/.config/polybar/modules/cpu-load.polybar.module
 
 [module/date]
+include-file = ~/.config/polybar/modules/date.polybar.module
+
+[module/date-time]
 include-file = ~/.config/polybar/modules/date-time.polybar.module
 
 [module/ewmh]
@@ -97,6 +110,9 @@ include-file = ~/.config/polybar/modules/workspaces.polybar.module
 
 [module/used-ram]
 include-file = ~/.config/polybar/modules/used-ram.polybar.module
+
+[module/time]
+include-file = ~/.config/polybar/modules/time.polybar.module
 
 [module/volume]
 include-file = ~/.config/polybar/modules/pulseaudio.polybar.module

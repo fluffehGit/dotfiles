@@ -2,14 +2,16 @@ type = internal/date
 
 interval = 5
 
+format-prefix = %{A1:alacritty -e calcurse:}%{A}
+format-prefix-font = 4
+format-prefix-margin-right = 1
+
 format = <label>
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
 
-label = %{A1:alacritty -e calcurse: T4 F#E7C664}%{F- T-} %{u#E7C664 +u}%date%%{A -u} %{T4 F#B39DF3}%{F- T-} %{u#B39DF3 +u}%time%%{-u}
+label = %{A1:alacritty -e calcurse:}%date%%{A}
 
 date = %d-%m-%y
-
-time = %H:%M
 
 ; vim: filetype=dosini

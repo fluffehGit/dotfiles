@@ -4,7 +4,7 @@ battery = BAT0
 adapter = AC
 full-at = 99
 
-format-discharging = <ramp-capacity><label-discharging>
+format-discharging = <ramp-capacity>
 format-discharging-background = ${colors.bg}
 
 ramp-capacity-0 = 
@@ -25,7 +25,7 @@ ramp-capacity-margin-right = 1
 ramp-capacity-font = 1
 ramp-capacity-foreground = ${colors.fg}
 
-label-discharging = %percentage%%
+;label-discharging = %percentage%%
 
 format-charging = <animation-charging><label-charging>
 format-charging-foreground = ${colors.fg}
@@ -42,15 +42,16 @@ animation-charging-5 = 
 animation-charging-6 = 
 animation-charging-framerate = 750
 animation-charging-font = 4
-animation-charging-margin-right = 1
+;animation-charging-margin-right = 1
 
 format-full = <label-full>
 format-full-font = 1
-format-full-offset = -2
+format-full-margin-right = 0
+;format-full-offset = -2
 format-full-foreground = ${colors.fg}
 format-full-background = ${colors.bg}
 
 label-full = ""
-label-full-margin-right = 1
+;label-full-margin-right = 1
 
 ; vim: filetype=dosini
