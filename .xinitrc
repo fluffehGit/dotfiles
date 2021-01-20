@@ -42,4 +42,6 @@ picom &
 xbindkeys &
 redshift &
 nitrogen --restore &
+joplin-desktop &
+deluge &
 exec herbstluftwm --locked
