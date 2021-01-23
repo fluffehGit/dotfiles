@@ -66,7 +66,7 @@ foreground = ${colors.fg}
 
 line-size = 2
 
-tray-position = right
+tray-position = left
 tray-detached = false
 tray-maxsize = 20
 tray-background = ${colors.bg}
@@ -79,9 +79,9 @@ include-file = ~/.config/polybar/fonts/mononoki-nerd.polybar.fonts
 
 enable-ipc = true
 
-modules-left = volume xbacklight wireless-network wired-network date-time
-modules-center = ewmh
-modules-right = cpu-load used-ram battery battery2
+modules-left = volume xbacklight
+modules-center = date ewmh time
+modules-right =  wireless-network wired-network cpu-load used-ram battery battery2
 
 ;==========================================================
 ;Modules A-Z
@@ -93,8 +93,6 @@ include-file = ~/.config/polybar/modules/battery.polybar.module
 [module/battery2]
 inherit = module/battery
 battery = BAT1
-
-format-full-margin-right = 1
 
 [module/cpu-load]
 include-file = ~/.config/polybar/modules/cpu-load.polybar.module

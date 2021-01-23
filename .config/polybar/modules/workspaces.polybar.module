@@ -15,24 +15,26 @@ icon-6 = chat;
 icon-7 = www;
 icon-8 = general;
 
+format-prefix = " "
+
 format = <label-state>
-;format-offset = 5
-format-font = 4
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
 
 label-active = 
-;label-active-foreground = ${colors.green}
+label-active-font = 4
 label-active-margin-right = 1
 
-;label-occupied = %{F#9ED072}|%{F-}%name%%{F#9ED072}|%{F-}
 label-occupied = 
+label-occupied-font = 4
 label-occupied-margin-right = 1
 
-label-urgent = %name%
+label-urgent = %{F#9ED072}%{F-}%
+label-urgent-font = 4
 label-urgent-padding = 2
 
 label-empty = %icon%
+label-empty-font = 4
 label-empty-margin-right = 1
 
 ; vim: filetype=dosini

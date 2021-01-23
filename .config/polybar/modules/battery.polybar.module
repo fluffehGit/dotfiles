@@ -46,8 +46,6 @@ animation-charging-font = 4
 
 format-full = <label-full>
 format-full-font = 1
-format-full-margin-right = 0
-;format-full-offset = -2
 format-full-foreground = ${colors.fg}
 format-full-background = ${colors.bg}
 

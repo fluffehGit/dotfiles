@@ -44,4 +44,5 @@ redshift &
 nitrogen --restore &
 joplin-desktop &
 deluge &
+element-desktop &
 exec herbstluftwm --locked

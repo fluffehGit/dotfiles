@@ -1,17 +1,12 @@
 type = internal/date
 
-interval = 5
-
-format-prefix = %{A1:alacritty -e calcurse:}%{A}
-format-prefix-font = 4
-format-prefix-margin-right = 1
-
 format = <label>
+format-margin = 0
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
 
-label = %{A1:alacritty -e calcurse:}%date%%{A}
+label = %{A1:alacritty -e calcurse:} %{o#E7C664 +o}%date%%{A -o}
 
-date = %d-%m-%y
+date = %d-%m
 
 ; vim: filetype=dosini
