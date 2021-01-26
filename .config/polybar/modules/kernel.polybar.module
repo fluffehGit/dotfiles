@@ -3,9 +3,9 @@ exec = uname -r
 tail = false
 interval = 1024
 
-;
-;format-prefix = ""
-format-foreground = ${colors.purple}
+;  
+format-overline = ${colors.yellow}
+format-foreground = ${colors.fg}
 format-background = ${colors.bg}
 
 ; vim: filetype=dosini
