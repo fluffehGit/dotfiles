@@ -84,7 +84,7 @@ hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
 # tags
-tag_names=( "doc1" "doc2" "doc3" "dev" "sys" "conf" "chat" "www" "general" )
+tag_names=( "doc1" "doc2" "doc3" "dev" "sys" "conf" "chat" "www" "general" "media" )
 tag_keys=( {1..9} 0 )
 
 hc rename default "${tag_names[0]}" || true
@@ -106,6 +106,7 @@ hc keybind "$Mod-KP_Right" use_index "5"
 hc keybind "$Mod-KP_Home" use_index "6"
 hc keybind "$Mod-KP_Up" use_index "7"
 hc keybind "$Mod-KP_Prior" use_index "8"
+hc keybind "$Mod-KP_Insert" use_index "9"
 
 hc keybind "$Mod-Shift-KP_End" move_index "0"
 hc keybind "$Mod-Shift-KP_Down" move_index "1"
@@ -116,6 +117,7 @@ hc keybind "$Mod-Shift-KP_Right" move_index "5"
 hc keybind "$Mod-Shift-KP_Home" move_index "6"
 hc keybind "$Mod-Shift-KP_Up" move_index "7"
 hc keybind "$Mod-Shift-KP_Prior" move_index "8"
+hc keybind "$Mod-Shift-KP_Insert" move_index "9"
 
 # cycle through tags
 hc keybind $Mod-period use_index +1 --skip-visible

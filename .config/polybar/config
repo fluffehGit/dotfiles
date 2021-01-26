@@ -79,9 +79,9 @@ include-file = ~/.config/polybar/fonts/mononoki-nerd.polybar.fonts
 
 enable-ipc = true
 
-modules-left = volume xbacklight
+modules-left = kernel
 modules-center = date ewmh time
-modules-right =  wireless-network wired-network cpu-load used-ram battery battery2
+modules-right =  volume xbacklight wireless-network wired-network cpu-load used-ram battery battery2
 
 ;==========================================================
 ;Modules A-Z
@@ -105,6 +105,9 @@ include-file = ~/.config/polybar/modules/date-time.polybar.module
 
 [module/ewmh]
 include-file = ~/.config/polybar/modules/workspaces.polybar.module
+
+[module/kernel]
+include-file = ~/.config/polybar/modules/kernel.polybar.module
 
 [module/used-ram]
 include-file = ~/.config/polybar/modules/used-ram.polybar.module

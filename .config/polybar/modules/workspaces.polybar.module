@@ -14,6 +14,7 @@ icon-5 = conf;
 icon-6 = chat;
 icon-7 = www;
 icon-8 = general;
+icon-9 = media;
 
 format-prefix = " "
 
@@ -29,7 +30,7 @@ label-occupied = 
 label-occupied-font = 4
 label-occupied-margin-right = 1
 
-label-urgent = %{F#9ED072}%{F-}%
+label-urgent = %{F#9ED072}%{F-}
 label-urgent-font = 4
 label-urgent-padding = 2
 
