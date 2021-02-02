@@ -81,7 +81,7 @@ enable-ipc = true
 
 modules-left = kernel
 modules-center = date ewmh time
-modules-right =  volume xbacklight wireless-network wired-network cpu-load used-ram battery battery2
+modules-right =  volume xbacklight cpu-load used-ram wireless-network wired-network battery battery2
 
 ;==========================================================
 ;Modules A-Z

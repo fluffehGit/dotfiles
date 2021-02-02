@@ -10,33 +10,33 @@
     text-color:                  #E2E2E3;
     font:                        "Mononoki Nerd Font 13";
     prompt-font:                 "Mononoki Nerd Font:style=Bold 12";
-    prompt-background:           #B39DF3;
+    prompt-background:           #76CCE0;
     prompt-foreground:           #2C2E34;
     prompt-padding:              4px;
     alternate-normal-background: #1C1F24;
     alternate-normal-foreground: @text-color;
-    selected-normal-background:  #B39DF3;
+    selected-normal-background:  #76CCE0;
     selected-normal-foreground:  #FFFFFF;
-    spacing:                     4;
+    spacing:                     1;
 }
 window {
-    border:  2;
-    padding: 4;
+    border:  1;
+    padding: 0;
 }
 mainbox {
-    border:  0;
+    border:  1;
     padding: 0;
 }
 message {
-    border:       1px dash 0px 0px ;
-    padding:      1px ;
+    border:       1px 0px 0px 0px ;
+    padding:      0px ;
 }
 listview {
     fixed-height: 0;
-    border:       2px dash 0px 0px ;
-    spacing:      2px ;
+    border:       1px 0px 0px 0px ;
+    spacing:      1px ;
     scrollbar:    true;
-    padding:      2px 0px 0px ;
+    padding:      1px dash 1px 0px ;
 }
 element {
     border:  0;
@@ -73,7 +73,7 @@ case-indicator {
 entry {
     padding: 4px 4px;
     expand: false;
-    width: 10em;
+    width: 500em;
 }
 prompt {
     padding:          @prompt-padding;
