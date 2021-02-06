@@ -1,5 +1,5 @@
 configuration {
-    width: 10;
-    lines: 5;
+    width: 20;
+    lines: 10;
     theme: "~/.config/rofi/themes/center.rasi";
 }

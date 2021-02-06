@@ -71,12 +71,18 @@
     Mod4+Shift+s
 
 ## System Controls
-#Suspend
+# Suspend
 "systemctl suspend"
     Mod4+Control+s
-#Reboot
+# Reboot
 "systemctl reboot"
     Mod4+Control+r
+# Hibernate
+"systemctl hibernate"
+    Mod4+Control+h
+# Power off
+"systemctl poweroff"
+    Mod4+Control+p
 ##################################
 # End of xbindkeys configuration #
 ##################################
