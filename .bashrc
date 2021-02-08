@@ -33,7 +33,7 @@ fi
 
 
 # Shopt
-set completion-ignore-case on
+bind "set completion-ignore-case on"
 
 set -o noclobber
 set -o vi
