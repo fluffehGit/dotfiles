@@ -68,7 +68,7 @@ line-size = 2
 
 tray-position = left
 tray-detached = false
-tray-maxsize = 20
+tray-maxsize = 19
 tray-background = ${colors.bg}
 tray-offset-x = 0
 tray-offset-y = 0

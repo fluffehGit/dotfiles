@@ -41,9 +41,11 @@ xsetroot -solid "#1D1E19"
 xbindkeys &
 picom &
 redshift &
-exec /bin/bash $HOME/Pictures/Wallpapers/nitrogenRandomWallpaper.sh &
+#exec /bin/bash $HOME/Pictures/Wallpapers/nitrogenRandomWallpaper.sh &
+nitrogen --restore &
 joplin-desktop &
 deluge &
 element-desktop &
+birdtray &
 
 exec herbstluftwm --locked
