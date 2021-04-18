@@ -83,6 +83,11 @@
 # Power off
 "systemctl poweroff"
     Mod4+Control+p
+
+# Looping through keyboard layouts
+"/home/fluffeh/bin/xkblayout-looper"
+    Mod4+Alt+l
+
 ##################################
 # End of xbindkeys configuration #
 ##################################

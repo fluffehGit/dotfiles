@@ -1,0 +1,61 @@
+#!/bin/bash
+####################################################################################################
+#
+#                  _   _   _   _   _   _   _   _
+#                 / \ / \ / \ / \ / \ / \ / \ / \
+#                ( K ( e ( y ( b ( o ( a ( r ( d )
+#                 \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+#         _   _   _   _   _   _     _   _   _   _   _   _
+#        / \ / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \
+#       ( L ( a ( y ( o ( u ( t ) ( L ( o ( o ( p ( e ( r )
+#        \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/
+#
+#
+# Author: fluffeh
+# v1.0 - 17-04-2021
+#
+####################################################################################################
+
+XKBLAYOUT="";
+LOCALES=("us" "ro" "de");
+
+if [ ! -f "/home/fluffeh/data/xkblayout-looper-locale" ];
+then
+    /bin/localectl | /bin/grep -i "layout" | /bin/cut -d":" -f2 | /bin/tr -d '[:space:]' > /home/fluffeh/data/xkblayout-looper-locale
+fi
+
+LOCALE=$(< /home/fluffeh/data/xkblayout-looper-locale);
+
+for x in ${!LOCALES[@]};
+do
+
+    if [ "${LOCALES[$x]}" = "${LOCALE}" ];
+    then
+
+        # moving index to the next locale
+        (( x+=1 ));
+
+        # resetting x if x+1 is greater than array's max index
+        if [ $x -eq ${#LOCALES[@]} ];
+        then
+            x=0;
+        fi
+
+        # setting options for setxkbmap command
+        if [ $x -eq 1 ];
+        then
+            XKBLAYOUT="${LOCALES[$x]} -variant std";
+        else
+            XKBLAYOUT="${LOCALES[$x]}";
+        fi
+
+        # exporting new locale
+        LOCALE="${LOCALES[$x]}";
+        echo $LOCALE >| data/xkblayout-looper-locale
+
+        # exiting loop
+        break;
+    fi
+done
+
+/bin/setxkbmap -layout $XKBLAYOUT;
