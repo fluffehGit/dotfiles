@@ -51,7 +51,7 @@ include-file = ~/.config/polybar/colors/sonokai.polybar.colors
 ;HerbstLuftWM
 ;==========================================================
 [bar/herbstBar]
-monitor = DP2-2
+monitor = DP2-1
 monitor-fallback = eDP1
 bottom = false
 fixed-center = true
