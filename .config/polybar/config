@@ -47,16 +47,15 @@ format-offset =
 [colors]
 include-file = ~/.config/polybar/colors/sonokai.polybar.colors
 
-;==========================================================
-;HerbstLuftWM
-;==========================================================
 [bar/herbstBar]
-monitor = DP2-1
+monitor = HDMI1
 monitor-fallback = eDP1
 bottom = false
 fixed-center = true
 height = 35
-width = 100%
+width = 99%
+offset-x = 0.5%
+offset-y = 0.5%
 
 ;lets WM manage polybar
 override-redirect = false

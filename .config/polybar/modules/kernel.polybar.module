@@ -4,7 +4,7 @@ tail = false
 interval = 1024
 
 ;  
-format-overline = ${colors.yellow}
+#format-overline = ${colors.yellow}
 format-foreground = ${colors.fg}
 format-background = ${colors.bg}
 

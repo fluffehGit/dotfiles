@@ -7,7 +7,8 @@ format-margin = 0
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
 
-label = %{o#B39DF3 +o}%time%%{-o}
+#label = %{o#B39DF3 +o}%time%%{-o}
+label = %time%
 
 time = %H:%M
 

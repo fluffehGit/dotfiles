@@ -5,8 +5,9 @@ format-margin = 0
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
 
-label = %{A1:alacritty -e calcurse:} %{o#E7C664 +o}%date%%{A -o}
+#label = %{A1:alacritty -e calcurse:} %{o#E7C664 +o}%date%%{A -o}
+label = %{A1:alacritty -e calcurse:} %date%%{A}
 
-date = %d-%m
+date = %d-%m-%y
 
 ; vim: filetype=dosini
