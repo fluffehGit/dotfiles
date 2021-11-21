@@ -1,7 +1,9 @@
-#!/bin/bashxrandr
+#!/bin/bash
 
 xrandr --output eDP1 --off && \
     xrandr --output HDMI1 --auto && \
     xrandr --output DP2-1 --left-of HDMI1 --auto && \
-    xrandr --output DP2-2 --right-of HDMI1 --auto
+    xrandr --output DP2-2 --right-of HDMI1 --auto && \
+    hc reload
+
 

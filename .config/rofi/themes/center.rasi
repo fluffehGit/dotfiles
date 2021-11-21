@@ -14,19 +14,16 @@
     spacing:                     1;
 }
 window {
-    border:  1;
-    padding: 0;
+    padding: 10px;
 }
 mainbox {
-    border:  1;
-    padding: 0;
 }
 message {
     border:       1px 0px 0px 0px ;
     padding:      0px ;
 }
 listview {
-    fixed-height: 0;
+    fixed-height: false;
     border:       1px 0px 0px 0px ;
     spacing:      1px ;
     scrollbar:    true;
@@ -67,7 +64,7 @@ case-indicator {
 entry {
     padding: 4px 4px;
     expand: false;
-    width: 500em;
+    width: 10px;
 }
 prompt {
     padding:          @prompt-padding;

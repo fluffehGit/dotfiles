@@ -1,0 +1,9 @@
+configuration {
+    width: 60;
+    lines: 100;
+    show-icons: true;
+    {run} {
+        display-name: ppizda;
+    }
+    theme: "~/.config/rofi/themes/center.rasi";
+}

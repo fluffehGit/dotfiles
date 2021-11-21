@@ -1,0 +1,53 @@
+* {
+    background-color:   transparent;
+    item-bg:            #2C2E34;
+    text-color:         #E2E2E2;
+    selected-bg:        #76CCE0;
+    selected-text-color:#FFFFFF;
+}
+
+window {
+    width:  27%;
+    height: 25%;
+}
+
+inputbar {
+    background-color:   @item-bg;
+    border-color:       #76CCE0;
+    margin: 0 0 1% 0;
+    padding: 1%;
+}
+
+entry {
+    padding: 0 0 0 1em;
+}
+
+listview {
+    fixed-height:       false;
+}
+
+element {
+    background-color:   @item-bg;
+}
+
+element.selected {
+    border:         1;
+    border-color:   @selected-bg;
+}
+
+element-text {
+//    padding: 3px 3px 3px 2.5em;
+}
+
+mode-switcher {
+    background-color:   @item-bg;
+}
+
+button {
+    padding: 0 0 0 3em;
+}
+
+button.selected {
+    background-color:   @selected-bg;
+    text-color:         @item-bg;
+}

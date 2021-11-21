@@ -83,6 +83,9 @@
 # Power off
 "systemctl poweroff"
     Mod4+Control+p
+# HLWM Display Setup
+"/bin/bash /home/fluffeh/bin/monitor-setup"
+    Mod4+Control+d
 
 # Looping through keyboard layouts
 "/home/fluffeh/bin/xkblayout-looper"

@@ -35,7 +35,7 @@ hc keybind $Mod-Shift-c close
 
 # spawning apps
 hc keybind $Mod-Return          spawn $myTerm
-hc keybind $Mod-Shift-Return    spawn rofi -show run
+hc keybind $Mod-Shift-Return    spawn rofi -modi "window,run,ssh" -show run -sidebar-mode
 hc keybind Alt-Tab              spawn rofi -show window
 hc keybind $Mod-Shift-i         spawn firefox
 hc keybind $Mod-Shift-p         spawn firefox --private-window
