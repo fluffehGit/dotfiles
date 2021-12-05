@@ -107,8 +107,9 @@ theme-name='__custom'
 
 [org/gnome/desktop/wm/keybindings]
 close=['<Shift><Super>c']
-move-to-monitor-left=['<Shift><Super>braceleft']
-move-to-monitor-right=['<Shift><Super>braceright']
+minimize=@as []
+move-to-monitor-left=@as []
+move-to-monitor-right=@as []
 move-to-workspace-1=['<Shift><Super>exclam']
 move-to-workspace-2=['<Shift><Super>at']
 move-to-workspace-3=['<Shift><Super>numbersign']
@@ -166,6 +167,16 @@ side-panel-size=200
 size=(900, 700)
 state=87168
 
+[org/gnome/gnome-system-monitor]
+current-tab='resources'
+network-total-in-bits=false
+show-dependencies=false
+show-whose-processes='user'
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
 [org/gnome/maps]
 last-viewed-location=[46.761913884135424, 23.617000579833984]
 map-type='MapsStreetSource'
@@ -195,7 +206,8 @@ night-light-temperature=uint32 4700
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
-search=['<Shift><Super>Return']
+screensaver=@as []
+search=@as []
 www=['<Shift><Super>i']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
@@ -207,12 +219,29 @@ name='gnome-terminal'
 app-picker-layout=[{'org.gnome.Maps.desktop': <{'position': <0>}>, '39716eb4-3c12-4fdf-b211-b0f92922f1e3': <{'position': <1>}>, 'gnome-control-center.desktop': <{'position': <2>}>, 'gnome-system-monitor.desktop': <{'position': <3>}>, 'org.gnome.Terminal.desktop': <{'position': <4>}>, 'Utilities': <{'position': <5>}>, 'org.gnome.Extensions.desktop': <{'position': <6>}>, 'yelp.desktop': <{'position': <7>}>, 'lstopo.desktop': <{'position': <8>}>, 'org.inkscape.Inkscape.desktop': <{'position': <9>}>, 'dcb66d24-fb46-46ee-93b2-033e22d929e4': <{'position': <10>}>}]
 command-history=['r']
 disabled-extensions=['auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'hide-activities-button']
+enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'hide-activities-button', 'pop-shell@system76.com']
 favorite-apps=['waterfox-g4.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Music.desktop', 'org.gnome.Nautilus.desktop']
 welcome-dialog-last-shown-version='41.1'
 
 [org/gnome/shell/app-switcher]
 current-workspace-only=true
+
+[org/gnome/shell/extensions/pop-shell]
+activate-launcher=['<Shift><Super>Return']
+focus-down=['<Super>j']
+focus-left=['<Super>h']
+focus-right=['<Super>l']
+focus-up=['<Super>k']
+pop-monitor-left=['<Shift><Super>braceleft']
+pop-monitor-right=['<Shift><Super>braceright']
+pop-workspace-down=@as []
+pop-workspace-up=@as []
+tile-by-default=false
+tile-enter=@as []
+tile-move-down=['<Shift><Super>j']
+tile-move-left=['<Shift><Super>h']
+tile-move-right=['<Shift><Super>l']
+tile-move-up=['<Shift><Super>k']
 
 [org/gnome/shell/extensions/user-theme]
 name='Flat-Remix-Cyan-Dark'
@@ -233,13 +262,16 @@ document-type='photo'
 check-timestamp=int64 1638643972
 
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-background-color='rgb(0,43,54)'
+background-color='rgb(23,20,33)'
+background-transparency-percent=6
 default-size-columns=85
 font='mononoki Nerd Font Mono 12'
-foreground-color='rgb(131,148,150)'
-palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
+foreground-color='rgb(208,207,204)'
+palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(18,72,139)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,209,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
 use-system-font=false
 use-theme-colors=false
+use-transparent-background=true
+visible-name='Transp'
 
 [org/gnome/tweaks]
 show-extensions-notice=false
