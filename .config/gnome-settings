@@ -1,0 +1,259 @@
+[org/gnome/baobab/ui]
+window-size=(960, 600)
+window-state=87168
+
+[org/gnome/books]
+window-maximized=true
+
+[org/gnome/boxes]
+first-run=false
+view='icon-view'
+window-maximized=true
+
+[org/gnome/clocks/state/window]
+panel-id='world'
+size=(870, 690)
+state=87168
+
+[org/gnome/control-center]
+last-panel='keyboard'
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'YaST', '39716eb4-3c12-4fdf-b211-b0f92922f1e3', 'dcb66d24-fb46-46ee-93b2-033e22d929e4']
+
+[org/gnome/desktop/app-folders/folders/39716eb4-3c12-4fdf-b211-b0f92922f1e3]
+apps=['org.gnome.Totem.desktop', 'org.gnome.Photos.desktop']
+name='Unnamed Folder'
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'simple-scan.desktop', 'org.gnome.Calculator.desktop', 'avahi-discover.desktop', 'org.gnome.Boxes.desktop', 'bssh.desktop', 'bvnc.desktop', 'org.gnome.gedit.desktop', 'org.gnome.clocks.desktop', 'vim.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/dcb66d24-fb46-46ee-93b2-033e22d929e4]
+apps=['qvidcap.desktop', 'qv4l2.desktop']
+name='Sound & Video'
+
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///home/peco/.local/share/backgrounds/2021-12-04-22-48-16-wp7062341-popos-wallpapers.jpg'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[org/gnome/desktop/calendar]
+show-weekdate=true
+
+[org/gnome/desktop/input-sources]
+per-window=false
+sources=[('xkb', 'us')]
+xkb-options=@as []
+
+[org/gnome/desktop/interface]
+clock-show-weekday=false
+cursor-theme='volantes_cursors'
+font-antialiasing='rgba'
+font-hinting='slight'
+font-name='mononoki Nerd Font 12'
+gtk-im-module='gtk-im-context-simple'
+gtk-theme='Flat-Remix-GTK-Cyan-Dark'
+icon-theme='Flat-Remix-Cyan-Dark'
+monospace-font-name='mononoki Nerd Font Mono 10'
+show-battery-percentage=false
+
+[org/gnome/desktop/notifications]
+application-children=['gnome-power-panel', 'io-element-element']
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/io-element-element]
+application-id='io.element.Element.desktop'
+
+[org/gnome/desktop/peripherals/keyboard]
+numlock-state=true
+
+[org/gnome/desktop/peripherals/mouse]
+natural-scroll=true
+speed=0.78676470588235303
+
+[org/gnome/desktop/peripherals/touchpad]
+tap-to-click=true
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+lock-delay=uint32 30
+picture-options='zoom'
+picture-uri='file:///home/peco/.local/share/backgrounds/2021-12-04-22-48-16-wp7062341-popos-wallpapers.jpg'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[org/gnome/desktop/search-providers]
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[org/gnome/desktop/session]
+idle-delay=uint32 300
+
+[org/gnome/desktop/sound]
+event-sounds=true
+theme-name='__custom'
+
+[org/gnome/desktop/wm/keybindings]
+close=['<Shift><Super>c']
+move-to-monitor-left=['<Shift><Super>braceleft']
+move-to-monitor-right=['<Shift><Super>braceright']
+move-to-workspace-1=['<Shift><Super>exclam']
+move-to-workspace-2=['<Shift><Super>at']
+move-to-workspace-3=['<Shift><Super>numbersign']
+move-to-workspace-4=['<Shift><Super>dollar']
+move-to-workspace-left=['<Alt><Super>comma']
+move-to-workspace-right=['<Alt><Super>period']
+switch-group=['<Alt>Tab']
+switch-group-backward=['<Shift><Alt>Tab']
+switch-to-workspace-1=['<Super>1']
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-3=['<Super>3']
+switch-to-workspace-4=['<Super>4']
+switch-to-workspace-left=['<Super>comma']
+switch-to-workspace-right=['<Super>period']
+switch-windows=@as []
+switch-windows-backward=@as []
+
+[org/gnome/desktop/wm/preferences]
+auto-raise=true
+button-layout='appmenu:close'
+focus-mode='click'
+resize-with-right-button=false
+
+[org/gnome/eog/view]
+background-color='rgb(0,0,0)'
+use-background-color=true
+
+[org/gnome/epiphany/state]
+is-maximized=false
+window-position=(-1, -1)
+window-size=(1024, 768)
+
+[org/gnome/evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[org/gnome/file-roller/listing]
+show-path=false
+
+[org/gnome/gedit/plugins]
+active-plugins=['spell', 'sort', 'modelines', 'filebrowser', 'docinfo']
+
+[org/gnome/gedit/plugins/filebrowser]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/peco/.cache/.fr-DBj6VN'
+
+[org/gnome/gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[org/gnome/gedit/state/window]
+bottom-panel-size=140
+side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
+size=(900, 700)
+state=87168
+
+[org/gnome/maps]
+last-viewed-location=[46.761913884135424, 23.617000579833984]
+map-type='MapsStreetSource'
+transportation-type='pedestrian'
+window-maximized=true
+zoom-level=13
+
+[org/gnome/mutter]
+attach-modal-dialogs=true
+center-new-windows=false
+workspaces-only-on-primary=true
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
+maximized=false
+
+[org/gnome/photos]
+window-maximized=true
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+night-light-temperature=uint32 4700
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+search=['<Shift><Super>Return']
+www=['<Shift><Super>i']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>Return'
+command='gnome-terminal'
+name='gnome-terminal'
+
+[org/gnome/shell]
+app-picker-layout=[{'org.gnome.Maps.desktop': <{'position': <0>}>, '39716eb4-3c12-4fdf-b211-b0f92922f1e3': <{'position': <1>}>, 'gnome-control-center.desktop': <{'position': <2>}>, 'gnome-system-monitor.desktop': <{'position': <3>}>, 'org.gnome.Terminal.desktop': <{'position': <4>}>, 'Utilities': <{'position': <5>}>, 'org.gnome.Extensions.desktop': <{'position': <6>}>, 'yelp.desktop': <{'position': <7>}>, 'lstopo.desktop': <{'position': <8>}>, 'org.inkscape.Inkscape.desktop': <{'position': <9>}>, 'dcb66d24-fb46-46ee-93b2-033e22d929e4': <{'position': <10>}>}]
+command-history=['r']
+disabled-extensions=['auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'hide-activities-button']
+favorite-apps=['waterfox-g4.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Music.desktop', 'org.gnome.Nautilus.desktop']
+welcome-dialog-last-shown-version='41.1'
+
+[org/gnome/shell/app-switcher]
+current-workspace-only=true
+
+[org/gnome/shell/extensions/user-theme]
+name='Flat-Remix-Cyan-Dark'
+
+[org/gnome/shell/keybindings]
+switch-to-application-1=@as []
+switch-to-application-2=@as []
+switch-to-application-3=@as []
+switch-to-application-4=@as []
+
+[org/gnome/shell/world-clocks]
+locations=@av []
+
+[org/gnome/simple-scan]
+document-type='photo'
+
+[org/gnome/software]
+check-timestamp=int64 1638643972
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(0,43,54)'
+default-size-columns=85
+font='mononoki Nerd Font Mono 12'
+foreground-color='rgb(131,148,150)'
+palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
+use-system-font=false
+use-theme-colors=false
+
+[org/gnome/tweaks]
+show-extensions-notice=false
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=201
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(23, 21)
+window-size=(1369, 902)
